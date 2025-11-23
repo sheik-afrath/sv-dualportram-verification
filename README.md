@@ -22,7 +22,9 @@ All files are located in the main root directory:
 
 ```bash
 ├── dual_ram.v        # Design Under Test (DUT) source code
-├── dual_ram_tb.sv    # SystemVerilog Testbench (contains Interface & Test Program)
+├── dual_ram_io.sv    # SystemVerilog Testbench (Interface)
+├── dual_ram_test.sv  # (Program block)
+├── dual_ram_top.sv   # (Top level module)
 └── README.md         # Project documentation
 ```
 
@@ -74,8 +76,8 @@ This project is designed to be run with **Siemens EDA QuestaSim** (or ModelSim).
 
     ```bash
     vlib work
-    vlog dual_ram.v dual_ram_tb.sv
-    vsim -c -do "run -all; exit" dual_ram_tb
+    vlog dual_ram.v dual_ram_io.sv dual_ram_test.sv dual_ram_top.sv
+    vsim -c -do "run -all; exit" dual_ram_top
     ```
 
 ## 👤 Author
