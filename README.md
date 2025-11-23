@@ -79,9 +79,3 @@ This project is designed to be run with **Siemens EDA QuestaSim** (or ModelSim).
     vlog dual_ram.v dual_ram_io.sv dual_ram_test.sv dual_ram_top.sv
     vsim -c -do "run -all; exit" dual_ram_top
     ```
-
-## 👤 Author
-
-  * **Sheik Afrath**
-
------
